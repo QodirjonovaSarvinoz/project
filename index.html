@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="">
+                <img src="./images/header-logo.png" alt="Logo">
+            </a>
+            <ul class="header-menus">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Categories</a>
+                </li>
+                <li>
+                    <a href="">My Collections</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+            </ul>
+            <div class="btns">
+                <button class="btn1">Login</button>
+                <button class="btn2">Sign Up</button>
+            </div>
+            <img class="header-toggle"
+                src="data:image/png;base64,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"
+                alt="">
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container hero-cards">
+                <div class="hero-info">
+                    <h1>Awesome tools for
+                        Designer & Developer.</h1>
+                    <p>Antool is a web collection of information on
+                        paid or free Design and Development tools</p>
+
+                    <form class="search">
+                        <input placeholder="find more than 430+ tools..." type="text">
+                        <button>Search</button>
+                    </form>
+                    <div class="hero-medias">
+                        <a href="">
+                            <img src="./images/facebook.png" alt="facebook-logo">
+                        </a>
+                        <a href="">
+                            <img src="./images/instagram.png" alt="instagram-logo">
+                        </a>
+                        <a href="">
+                            <img src="./images/twitter.png" alt="twitter-logo">
+                        </a>
+                    </div>
+                </div>
+                <img class="hero-img" src="./images/Illustration.png" alt="">
+            </div>
+        </section>
+
+        <section id="content">
+            <div class="container content">
+                <h1>Most Popular Tools</h1>
+                <h2>Tools for the best Designers and Developers
+                    most popularly used in the world</h2>
+
+                <div class="content-cards">
+                    <div class="content-card">
+                        <div class="content-card_box">
+                            <img src="./images/figma.png" alt="">
+                            <div>
+                                <h3>FIGMA</h3>
+                                <h4>Free</h4>
+                            </div>
+                        </div>
+                        <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                        <div class="content-icons">
+                            <div class="content-icon">
+                                <img class="icon1" src="./images/like.png" alt="like">
+                                <img class="icon2" src="./images/red-like.png" alt="like">
+                                <img class="icon3" src="./images/file.png" alt="file">
+                            </div>
+                            <button>Visit</button>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-card_box">
+                            <img src="./images/diamond.png" alt="">
+                            <div>
+                                <h3>Sketch</h3>
+                                <h4>Trial & Paid</h4>
+                            </div>
+                        </div>
+                        <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                        <div class="content-icons">
+                            <div class="content-icon">
+                                <img class="icon1" src="./images/like.png" alt="like">
+                                <img class="icon2" src="./images/red-like.png" alt="like">
+                                <img class="icon3" src="./images/file.png" alt="file">
+                            </div>
+                            <button>Visit</button>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-card_box">
+                            <img src="./images/visual-studio-code.png" alt="">
+                            <div>
+                                <h3>Visual Studio Code</h3>
+                                <h4>Free</h4>
+                            </div>
+                        </div>
+                        <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                        <div class="content-icons">
+                            <div class="content-icon">
+                                <img class="icon1" src="./images/like.png" alt="like">
+                                <img class="icon2" src="./images/red-like.png" alt="like">
+                                <img class="icon3" src="./images/file.png" alt="file">
+                            </div>
+                            <button>Visit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_card">
+                    <div class="content-card">
+                        <div class="content-card_box">
+                            <img src="./images/notion.png" alt="">
+                            <div>
+                                <h3>Notion</h3>
+                                <h4>Free & Paid</h4>
+                            </div>
+                        </div>
+                        <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                        <div class="content-icons">
+                            <div class="content-icon">
+                                <img class="icon1" src="./images/like.png" alt="like">
+                                <img class="icon2" src="./images/red-like.png" alt="like">
+                                <img class="icon3" src="./images/file.png" alt="file">
+                            </div>
+                            <button>Visit</button>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-card_box">
+                            <img src="./images/slack.png" alt="">
+                            <div>
+                                <h3>Slack</h3>
+                                <h4>Free & Paid</h4>
+                            </div>
+                        </div>
+                        <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                        <div class="content-icons">
+                            <div class="content-icon">
+                                <img class="icon1" src="./images/like.png" alt="like">
+                                <img class="icon2" src="./images/red-like.png" alt="like">
+                                <img class="icon3" src="./images/file.png" alt="file">
+                            </div>
+                            <button>Visit</button>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="content-card_box">
+                            <img src="./images/invision.png" alt="">
+                            <div>
+                                <h3>Invision</h3>
+                                <h4>Free & Paid</h4>
+                            </div>
+                        </div>
+                        <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                        <div class="content-icons">
+                            <div class="content-icon">
+                                <img class="icon1" src="./images/like.png" alt="like">
+                                <img class="icon2" src="./images/red-like.png" alt="like">
+                                <img class="icon3" src="./images/file.png" alt="file">
+                            </div>
+                            <button>Visit</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="content_btn">Load more</button>
+            </div>
+        </section>
+
+        <section id="main-logos">
+            <div class="container desc">
+                <div class="logos">
+                    <h1>Trusted more than 150+ brand</h1>
+                    <div class="main-logos_desc">
+                        <img src="./images/logos_microsoft.png" alt="">
+                        <img src="./images/logos_google.png" alt="">
+                        <img src="./images/logos_slack.png" alt="">
+                        <img src="./images/logos_wordpress.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newcomer">
+            <div class="container newcomer_card">
+                <div class="newcomer-card">
+                    <h1>Newcomer Tools</h1>
+                    <p>Wow! see the latest update of the most recommended
+                        tools from reliable designers and developers</p>
+                    <button>Explore more</button>
+                </div>
+                <div>
+                    <div class="newcomer-cards">
+                        <div class="newcomer-cardss">
+                            <div class="content-card_box">
+                                <img src="./images/zeplin.png" alt="">
+                                <div>
+                                    <h3>Zeplin</h3>
+                                    <h4>Free & Paid</h4>
+                                </div>
+                            </div>
+                            <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <div class="content-icons">
+                                <div class="content-icon">
+                                    <img class="icon1" src="./images/like.png" alt="like">
+                                    <img class="icon2" src="./images/red-like.png" alt="like">
+                                    <img class="icon3" src="./images/file.png" alt="file">
+                                </div>
+                                <button>Visit</button>
+                            </div>
+                        </div>
+                        <div class="newcomer-cardss">
+                            <div class="content-card_box">
+                                <img src="./images/jb_phpstorm.png" alt="">
+                                <div>
+                                    <h3>PHPStorm</h3>
+                                    <h4>Free</h4>
+                                </div>
+                            </div>
+                            <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <div class="content-icons">
+                                <div class="content-icon">
+                                    <img class="icon1" src="./images/like.png" alt="like">
+                                    <img class="icon2" src="./images/red-like.png" alt="like">
+                                    <img class="icon3" src="./images/file.png" alt="file">
+                                </div>
+                                <button>Visit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newcomer-cards">
+                        <div class="newcomer-cardss">
+                            <div class="content-card_box">
+                                <img src="./images/jb_toolbox_app.png" alt="">
+                                <div>
+                                    <h3>Toolbox</h3>
+                                    <h4>Free</h4>
+                                </div>
+                            </div>
+                            <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <div class="content-icons">
+                                <div class="content-icon">
+                                    <img class="icon1" src="./images/like.png" alt="like">
+                                    <img class="icon2" src="./images/red-like.png" alt="like">
+                                    <img class="icon3" src="./images/file.png" alt="file">
+                                </div>
+                                <button>Visit</button>
+                            </div>
+                        </div>
+                        <div class="newcomer-cardss">
+                            <div class="content-card_box">
+                                <img src="./images/procreate.png" alt="">
+                                <div>
+                                    <h3>Procreate</h3>
+                                    <h4>Free</h4>
+                                </div>
+                            </div>
+                            <p class="content_infoo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                            <div class="content-icons">
+                                <div class="content-icon">
+                                    <img class="icon1" src="./images/like.png" alt="like">
+                                    <img class="icon2" src="./images/red-like.png" alt="like">
+                                    <img class="icon3" src="./images/file.png" alt="file">
+                                </div>
+                                <button>Visit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container about-card">
+                <img class="about-img" src="./images/image.png" alt="">
+                <div>
+                    <p class="about-desc">Incididunt cillum do sint sint enim ullamco id deserunt mollit qui
+                        reprehenderit do. Velit ex tempor cillum ad sint
+                        occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur
+                        amet. Sunt consectetur
+                        veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad.</p>
+                </div>
+
+            </div>
+            <img class="about-image" src="./images/img.png" alt="">
+        </section>
+
+        <section id="contribut">
+            <div class="container contribut-cards">
+                <h1>Become a contributor?</h1>
+                <p>Join us and get tips & tricks to become a great Designer and Developer</p>
+                <form class="contribut-form">
+                    <input placeholder="Enter your email..." type="text">
+                    <button>Join Us</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="./images/footer-logo.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a class="footer-desc" href="">Copyright 2021. Antools</a>
+                </li>
+                <li>
+                    <a href="">Antool is a web collection of information on paid or free Design and Development
+                        tools</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class="footer-info" href="">Contact Us</a>
+                </li>
+                <li>
+                    <a href="">+621987463</a>
+                </li>
+                <li>
+                    <a href="">M Building, No.10 A</a>
+                </li>
+                <li>
+                    <a href="">antools@awesome.com</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class="footer-info" href="">Categories</a>
+                </li>
+                <li>
+                    <a href="">Design</a>
+                </li>
+                <li>
+                    <a href="">Development</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class="footer-info" href="">Company Info</a>
+                </li>
+                <li>
+                    <a href="">About Us</a>
+                </li>
+                <li>
+                    <a href="">Our Partners</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
